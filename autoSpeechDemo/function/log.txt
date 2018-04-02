@@ -1,0 +1,6 @@
+[100%] /data/data/com.saicmotor.voice/files/log.txt
+/data/data/com.saicmotor.voice/files/log.txt: 1 file pulled. 0.0 MB/s (1 bytes in 0.008s)
+[100%] /data/data/com.saicmotor.voice/files/log.txt
+/data/data/com.saicmotor.voice/files/log.txt: 1 file pulled. 0.1 MB/s (378 bytes in 0.004s)
+[100%] /data/data/com.saicmotor.voice/files/log.txt
+/data/data/com.saicmotor.voice/files/log.txt: 1 file pulled. 0.1 MB/s (377 bytes in 0.003s)

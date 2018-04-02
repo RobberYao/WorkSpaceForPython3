@@ -1,0 +1,141 @@
+#
+##├ │┌ ─└ ┘
+#   设计思路：
+
+#   "语  音"自动化测试本质：区分各种场景下对应的MP3文件（录音指令）
+
+#   一次自动化测试流程：测试行为 + MP3文件组成。
+                        打开音乐测试： 播放->打开音乐.MP3
+
+
+#
+# 1.测试行为：
+        初始化：python 库初始化
+#       播放：找到传入指定MP3（通过传入信息找到2.中的MP3）
+#       往复：重复执行N次某个MP3（注意：区别于单曲循环、列表循环）
+#
+#
+# 2.MP3文件（录音文件层级关系）：
+#       语言：
+#         │
+#         └─── 中文：[英文、德文、阿拉伯、西语]
+#               │
+#               └─ 模 块：
+#                    │
+#                    ├─── 音乐模块：
+#                    │       ├─── 播放音乐.MP3
+#                    │       ├─── 暂停.MP3
+#                    │       ├─── 上一首音乐.MP3
+#                    │       ├─── 下一首音乐.MP3
+#                    │       ├─── 单曲循环.MP3
+#                    │       ├─── 列表循环.MP3
+#                    │       ├─── 随机播放.MP3
+#                    │       ├─── 停止播放.MP3
+#                    │
+#                    │
+#                    ├─── 收音机模块：
+#                    │       ├─── 打开收音机.MP3
+#                    │       ├─── 搜索电台.MP3
+#                    │       ├───
+#                    │       ├───
+#                    │
+#                    ├─── 视频模块：
+#                    │       ├─── 播放视频.MP3
+#                    │       ├─── 快进.MP3
+#                    │       ├─── 快退.MP3
+#                    │
+#                    │
+#                    ├─── 地图模块：
+#                    │       ├─── 导航回家.MP3
+#                    │       ├───
+#                    │       ├───
+                     │
+#                    │
+#                    ├─── 车控模块：
+#                    │       ├─── 自动泊车.MP3
+#                    │       ├─── 打开天窗.MP3
+#                    │       ├─── 打开雨刮器.MP3
+#                    │       ├─── 打开空调.MP3
+#                    │
+#                    │
+                     ├─── 蓝牙模块：
+                     │       ├─── 打电话.MP3
+#                    │       ├───
+
+
+-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+
+功能使用文档说明：
+项目名称：autoSpeechDemo
+结构目录    autoSpeechDemo
+                │
+                ├─── AutoCollection 音频自动化测试配置文件：
+                │       │
+                │       └─── runCollection：需要播放的音频配置文件（**重要**）
+                │
+                ├─── BaseConfig 音频自动化测试映射配置：
+                │       │
+                │       ├─ filePathConfig.py : 音频文件映射类：所有音频文件配置的全量信息包括大类（语言、模块）的配置（**重要**）
+                │       │
+                │       └─ responseConfig.py ：暂时不用 后期可能需要整合车机语音返回信息（当前功能集成在runCollection中）时再做开发
+                │
+                ├─── baseFunction 项目底层功能类：
+                │       │
+                │       └─ fileHandler.py ：文件操作类
+                │
+                └─── function 主要功能类：
+                        │
+                        ├─ osPlay.py ：音频文件操作类（播放、循环播放）
+                        │
+                        ├─ parseCollectionAndRun.py ：项目启动类：根据runCollection配置文件，执行音频文件的“绝对路径”、播放（**重要**）
+                        │
+                        ├─ gplay.exe ：播放器
+                        │
+                        └─ 其他类均正在开发或待开发
+
+-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+
+
+
+runCollection配置方法：
+    例：
+        languageDict=english,repeat=1;
+        musicModule=musicVoice,repeat=1;
+        voice=e_m_OpenLocalMusic,repeat=1,correctResponse=OpenLocalMusic
+
+    功能配置解释：
+            languageDict：对应语言：english、china
+
+            musicModule：对应模块：
+                        musicModule: musicVoice, 音乐模块：音乐文件夹
+                        mapModule: mapVoice, 地图模块：地图文件夹
+                        radioModule: radioVoice, 收音机模块：收音机文件夹
+                        systemModule: systemVoice 系统模块：系统文件夹
+
+            voice：音频文件名
+
+            repeat：音频重复播放次数
+
+            correctResponse：车机返回正确结果
+
+
+注1.测试用例以音频为单位，多个音频分多组写，需要用“/”分割
+
+    列如：
+        languageDict=english,repeat=1;
+        musicModule=musicVoice,repeat=1;
+        voice=e_m_OpenLocalMusic,repeat=1,correctResponse=OpenLocalMusic
+        /
+        languageDict=english,repeat=1;
+        musicModule=musicVoice,repeat=1;
+        voice=e_m_OpenLocalMusic,repeat=1,correctResponse=OpenLocalMusic
+
+
+
+
+
+
+
+
+
+
