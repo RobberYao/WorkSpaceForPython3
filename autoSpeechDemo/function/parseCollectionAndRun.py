@@ -7,7 +7,7 @@ from autoSpeechDemo.BaseConfig import filePathConfig as fpConfig
 
 totalDicts = ['languageDict', 'module', 'voice']  # 音频文件索引
 runCollectPath = 'D:/WorkSpaceForPython3.0/autoSpeechDemo/AutoCollection/runCollection'
-voicePath = 'D:/WorkSpaceForPython3.0/mp3File'
+voicePath = 'D:/mp3File'
 
 
 # 读取runCollection文件（需要执行的自动化测试用例配置文件）

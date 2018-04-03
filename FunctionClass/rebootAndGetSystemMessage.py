@@ -50,7 +50,7 @@ def mainMethod():
     for i in range(0, 999999):
         adbCreateLogFile.createLogFile(adbCreateLogFile.isLogFileExit())
         reboot()
-        with open("SystemMessage.txt", 'a+') as fo:
+        with open("D:/LogFile/SystemMessage.txt", 'a+') as fo:
             fo.write("[Reboot_Times :" + str(i) + "]")
         print("Reboot_Times :" + str(i))
         print("Start witing")

@@ -4,9 +4,9 @@ import time
 # from tinytag import TinyTag
 from autoSpeechDemo.BaseConfig.filePathConfig import musicVoice as mv
 
-listFile = 'D:/WorkSpaceForPython3.0/mp3File/chinese'
-filePath1 = 'D:/WorkSpaceForPython3.0/mp3File/chinese/musicVoice/暂停.MP3'
-filePath2 = 'D:/WorkSpaceForPython3.0/mp3File/chinese/musicVoice/下一首.MP3'
+listFile = 'D:/mp3File/chinese'
+filePath1 = 'D:/mp3File/chinese/musicVoice/暂停.MP3'
+filePath2 = 'D:/mp3File/chinese/musicVoice/下一首.MP3'
 
 
 # 播放语音 使用gplay

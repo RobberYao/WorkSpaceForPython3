@@ -4,8 +4,8 @@ import re
 folderPath = 'd:/SystemExcel/'
 filePath = folderPath + 'systemCollection.xlsx'
 
-testFile = 'D:/WorkSpaceForPython3.0/test.txt'
-targetfile = 'D:/WorkSpaceForPython3.0/mp3File/music/2.mp3'
+testFile = 'D:/test.txt'
+targetfile = 'D:/mp3File/music/2.mp3'
 
 
 # 判断文件夹是否存在

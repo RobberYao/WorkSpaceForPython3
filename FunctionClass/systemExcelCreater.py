@@ -8,8 +8,8 @@ import re
 
 excelFolderPath = 'd:/SystemExcel/'
 excelFilePath = excelFolderPath + 'systemCollection.xlsx'
-testFile = 'D:/WorkSpaceForPython3.0/FunctionClass/SystemMessage.txt'
-targetfile = 'D:/WorkSpaceForPython3.0/FunctionClass/targetfile.txt'
+testFile = 'D:/LogFile/SystemMessage.txt'
+targetfile = 'D:/LogFile/targetfile.txt'
 
 rebootRowNum = 2  # excel中rebootRowNum行数控制
 
