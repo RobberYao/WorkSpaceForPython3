@@ -29,9 +29,9 @@ commonButten = {
 
 # 主页面控件
 mainPage = {
-    'changeMusicStatus': 'ainPage.changeMusicStatus()',
-    'enterMusicModule': 'ainPage.enterMusicModule()',
-    'enterDataModule': 'ainPage.enterDataModule()',
+    'changeMusicStatus': 'mainPage.changeMusicStatus()',
+    'enterMusicModule': 'mainPage.enterMusicModule()',
+    'enterDataModule': 'mainPage.enterDataModule()',
     'swipeLeft': 'mainPage.swipeLeft()',
 
 }
