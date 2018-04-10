@@ -28,6 +28,7 @@ commonButten = {
 };
 
 # 主页面控件
+'''
 mainPage = {
     'changeMusicStatus': 'mainPage.changeMusicStatus()',
     'enterMusicModule': 'mainPage.enterMusicModule()',
@@ -35,3 +36,4 @@ mainPage = {
     'swipeLeft': 'mainPage.swipeLeft()',
 
 }
+'''

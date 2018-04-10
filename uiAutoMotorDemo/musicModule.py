@@ -49,11 +49,13 @@ def getNextSongByLocation():
 # 打开音效界面
 def enterSoundEffectPage():
     d.click(390, 345)
+    time.sleep(2)
 
 
 # 打开音乐文件界面
 def enterMusicFilePage():
     d.click(120, 345)
+    time.sleep(2)
 
 
 if __name__ == '__main__':

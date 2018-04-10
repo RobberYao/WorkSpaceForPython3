@@ -85,7 +85,7 @@ def screenShot():
 
 if __name__ == '__main__':
     # d.screen.on()
-    openMusic()
+     ()
     # openByIndex()
     # back()
     # power()

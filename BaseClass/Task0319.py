@@ -2,6 +2,7 @@
 import time
 import psutil
 import re
+import logging
 import subprocess
 
 
@@ -50,5 +51,11 @@ def mainMethod():
 
 
 
+
+
+
 if __name__ == "__main__":
-    mainMethod()
+
+    while True:
+        logging.warning('给你涨工资了，还不好，我都没得涨给你涨工资了，还不好，我都没得涨!,顾老板')
+

@@ -11,7 +11,7 @@ def changeMusicStatus():
     # d(text='Music').click()
     print('start changeMusicStatus...')
     d(resourceId='com.android.launcher3:id/iv_launcher_music_play').click()
-    #time.sleep(5)
+    time.sleep(1)
     print('end changeMusicStatus...')
 
 
@@ -19,7 +19,7 @@ def changeMusicStatus():
 def enterMusicModule():
     print('start enterMusicModule...')
     d(resourceId='com.android.launcher3:id/iv_music_normal').click()
-   # time.sleep(5)
+    time.sleep(1)
     print('end enterMusicModule...')
 
 
@@ -35,7 +35,7 @@ def enterDataModule():
 def swipeLeft():
     print('start swipeLeft...')
     d.swipe(890, 530, 130, 530)  # 滑动范围写死
-    #time.sleep(2)
+    time.sleep(2)
     print('end swipeLeft...')
 
 
