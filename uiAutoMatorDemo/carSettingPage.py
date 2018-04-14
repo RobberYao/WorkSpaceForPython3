@@ -310,10 +310,20 @@ def setCenterFrequency(frequency):
     print('stop setCenterFrequency...')
 
 
+# 设置亮度
+def setDisplay():
+    print('start setDisplay...')
+    d(text='DISPLAY').click()
+    d(text='BACKLIGHT BRIGHTNESS').click()
+
+    print('stop setDisplay...')
+
+
 if __name__ == '__main__':
     # chooseLoudnessEffect()
     # chooseHighBoost()
-    setCenterFrequency('FLAT')
+    # setCenterFrequency('FLAT')
+    setDisplay()
     # changeLoundnessValue(0)
 # chooseSoundEqualizerItem('CUSTOM')
 # chooseSoundEqualizerItem('OFF')
