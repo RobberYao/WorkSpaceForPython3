@@ -1,5 +1,4 @@
 from uiautomator import device as d
-from appium import webdriver as wd
 import time
 
 
@@ -311,11 +310,14 @@ def setCenterFrequency(frequency):
 
 
 # 设置亮度
-def setDisplay():
+def setDisplay(num):
     print('start setDisplay...')
     d(text='DISPLAY').click()
     d(text='BACKLIGHT BRIGHTNESS').click()
-
+    x = 259 + num * 28
+    y = 340.5
+    d.click(x, y)
+    print('print [' + str(x) + ', ' + str(y) + ']')
     print('stop setDisplay...')
 
 
@@ -323,7 +325,10 @@ if __name__ == '__main__':
     # chooseLoudnessEffect()
     # chooseHighBoost()
     # setCenterFrequency('FLAT')
-    setDisplay()
+    clickCancel()
+    setDisplay(19)
+    clickOk()
+
     # changeLoundnessValue(0)
 # chooseSoundEqualizerItem('CUSTOM')
 # chooseSoundEqualizerItem('OFF')

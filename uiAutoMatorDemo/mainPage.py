@@ -46,6 +46,13 @@ def enterCarSetting():
     print('end enterCarSetting...')
 
 
+# 进入settings页面中
+def enterSettings():
+    print('start enterSettings...')
+    d(text='Settings').click()
+    print('stop enterSettings...')
+
+
 # 底层控件向左滑动
 def swipeBottomLeft():
     print('start swipeBottomLeft...')
@@ -142,8 +149,9 @@ if __name__ == '__main__':
     # minimization()
     # cleanAllPage()
     # print(d.info)
-    enterAppMenuPage()
-    swipeLeftInAppMenuPage()
-    swipeRightInAppMenuPage()
-    swipeRightInAppMenuPage()
-    enterCarSetting()
+    # enterAppMenuPage()
+    # swipeLeftInAppMenuPage()
+    # swipeRightInAppMenuPage()
+    # swipeRightInAppMenuPage()
+    # enterCarSetting()
+    enterSettings()
