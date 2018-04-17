@@ -1,5 +1,4 @@
 from uiautomator import device as d
-from appium import webdriver as wd
 import time
 
 
@@ -217,7 +216,7 @@ def setSoundEffect():
     print('stop setSoundEffect...')
 
 
-# 设置音效
+# 设置音效平衡
 def setSoundEqualizer():
     print('start setSoundEqualizer...')
     d(text='SOUND EQUALIZER').click()
@@ -286,7 +285,7 @@ def chooseHighBoost():
     print('stop chooseHighBoost...')
 
 
-# 设置响度音效值y[]
+# 设置响度音效值范围[-15,0]
 def changeLoundnessValue(num):
     print('start setLoundnessValue...')
     if num < -15 or num > 0:  # 参数检验
@@ -310,12 +309,15 @@ def setCenterFrequency(frequency):
     print('stop setCenterFrequency...')
 
 
-# 设置亮度
-def setDisplay():
+# 设置亮度范围[0, 19]
+def setDisplay(num):
     print('start setDisplay...')
     d(text='DISPLAY').click()
     d(text='BACKLIGHT BRIGHTNESS').click()
-
+    x = 259 + num * 28
+    y = 340.5
+    d.click(x, y)
+    print('print [' + str(x) + ', ' + str(y) + ']')
     print('stop setDisplay...')
 
 
@@ -323,7 +325,10 @@ if __name__ == '__main__':
     # chooseLoudnessEffect()
     # chooseHighBoost()
     # setCenterFrequency('FLAT')
-    setDisplay()
+    clickCancel()
+    setDisplay(19)
+    clickOk()
+
     # changeLoundnessValue(0)
 # chooseSoundEqualizerItem('CUSTOM')
 # chooseSoundEqualizerItem('OFF')

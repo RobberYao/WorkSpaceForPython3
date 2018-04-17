@@ -2,7 +2,7 @@ from uiautomator import device as d
 import time
 
 
-# 音乐模块方法
+# 音乐播放页面功能
 
 # 播放方式、单曲循环、重复播放（大图标）
 def changePlayStatusByLocation():

@@ -39,11 +39,26 @@ def enterAppMenuPage():
     print('end enterAppMenuPage...')
 
 
+# 进入Music页面中
+def enterMusic():
+    print('start enterMusic...')
+    d(text='Music').click()
+    time.sleep(2)
+    print('end enterMusic...')
+
+
 # 进入CarSetting页面中
 def enterCarSetting():
     print('start enterCarSetting...')
     d(text='Car Setting').click()
     print('end enterCarSetting...')
+
+
+# 进入settings页面中
+def enterSettings():
+    print('start enterSettings...')
+    d(text='Settings').click()
+    print('stop enterSettings...')
 
 
 # 底层控件向左滑动
@@ -142,8 +157,9 @@ if __name__ == '__main__':
     # minimization()
     # cleanAllPage()
     # print(d.info)
-    enterAppMenuPage()
-    swipeLeftInAppMenuPage()
-    swipeRightInAppMenuPage()
-    swipeRightInAppMenuPage()
-    enterCarSetting()
+    # enterAppMenuPage()
+    # swipeLeftInAppMenuPage()
+    # swipeRightInAppMenuPage()
+    # swipeRightInAppMenuPage()
+    # enterCarSetting()
+    enterSettings()
