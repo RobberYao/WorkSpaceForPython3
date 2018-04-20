@@ -1,7 +1,7 @@
 # 解析Json配置文件
 import time
 import os
-import logHandler
+from autoSpeechDemo.function import logHandler
 from autoSpeechDemo.function import osPlay
 from autoSpeechDemo.BaseConfig import filePathConfig as fpConfig
 

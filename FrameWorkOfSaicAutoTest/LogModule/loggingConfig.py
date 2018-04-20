@@ -1,7 +1,7 @@
 import logging
 from logging.config import fileConfig
 
-fileConfig("../logging.conf")  # 采用配置文件
+fileConfig("../LogModule/logging.ini")  # 采用配置文件
 filePath3 = 'D:/mp3File/english/musicVoice/e_g_CloseMusic.mp3'
 # create logger
 
@@ -16,16 +16,20 @@ logger1.critical("critical message")
 '''
 
 
-def consoleLog():
-    fileConfig("logging.conf")  # 采用配置文件
-    return logging.getLogger('consoleLogger')
+class loggingConfig:
 
+    def init(self):
+        fileConfig("logging.ini")  # 采用配置文件
 
-def fileLog():
-    fileConfig("logging.conf")  # 采用配置文件
-    return logging.getLogger('fileLogger')
+    def consoleLog(self):
+        return logging.getLogger('consoleLogger')
+
+    def fileLog(self):
+        # fileConfig("logging.ini")  # 采用配置文件
+        return logging.getLogger('fileLogger')
 
 
 if __name__ == '__main__':
-    consoleLog().info('play: ' + filePath3)
-    fileLog().info('play: ' + filePath3)
+    lc = loggingConfig()
+    lc.consoleLog().info('play: ' + filePath3)
+    lc.fileLog().info('play: ' + filePath3)
