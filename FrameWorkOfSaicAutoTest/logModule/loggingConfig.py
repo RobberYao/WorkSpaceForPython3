@@ -1,7 +1,7 @@
 import logging
 from logging.config import fileConfig
 
-fileConfig("../LogModule/logging.ini")  # 采用配置文件
+fileConfig("../logModule/logging.ini")  # 采用配置文件
 filePath3 = 'D:/mp3File/english/musicVoice/e_g_CloseMusic.mp3'
 # create logger
 
