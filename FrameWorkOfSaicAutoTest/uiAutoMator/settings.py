@@ -4,6 +4,7 @@ from FrameWorkOfSaicAutoTest.logModule import loggingConfig
 
 lc = loggingConfig.loggingConfig()
 
+
 # Settings页面向上滑动
 def swipeUp():
     lc.consoleLog().info('start swipeUp...')
@@ -58,6 +59,34 @@ def loginWifiConnectByUserAndPassword(wifiName, password):
     lc.fileLog().info('end loginWifiConnectByUserAndPassword...')
 
 
+# 根据wifi名字查看wifi信息
+def chooseWifiByWifiName(wifiName):
+    lc.fileLog().info('start chooseWifiByWifiName...')
+    try:
+        d(resourceId='android:id/list', className='android.widget.ListView',
+          packageName='com.android.settings').child_by_text(wifiName, text=wifiName).click()
+    except:
+        lc.fileLog().info(wifiName + 'is not exists')
+    time.sleep(1)
+    lc.fileLog().info('end chooseWifiByWifiName...')
+
+
+# 遗忘wifi连接信息
+def forgetWifiConfig():
+    lc.fileLog().info('start forgetWifiConfig...')
+    d(text='Forget').click()
+    time.sleep(1)
+    lc.fileLog().info('end forgetWifiConfig...')
+
+
+# 取消
+def cancel():
+    lc.fileLog().info('start Cancel...')
+    d(text='Cancel').click()
+    time.sleep(1)
+    lc.fileLog().info('end Cancel...')
+
+
 # 进入语言选择界面
 def enterLanguageAndInput():
     text = 'Language and input'
@@ -83,6 +112,10 @@ def chooseLanguage(language):
 
 
 if __name__ == '__main__':
+    wifiName = 'SACO_VIP'
+
+    # サタラマか、😏🙈😁😂😊😆😁🙂👅💄👄🎃👾👽
+    # Fpassword = 'Cisco123'
     # swipeDown()
     # swipeDown()
     # swipeDown()
@@ -93,4 +126,7 @@ if __name__ == '__main__':
     # enterWifiConnectSetting()
     # loginWifiConnectByUserAndPassword('SACO_VIP', 'Cisco123')
     # enterLanguageAndInput()
-    chooseLanguage('Español')
+    # chooseLanguage('Español')
+    # forgetWifiConfig()
+    # cancel()
+    chooseWifiByWifiName(wifiName)

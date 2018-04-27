@@ -2,7 +2,7 @@ FrameWorkOfSaicAutoTest框架调用说明
 
 现有模块：
     frameWorkTest:脚本存放处
-    uiAutoMatorDemo：UI自动化测试模块
+    uiAutoMator：UI自动化测试模块
     voiceAutoTest：语音模块
 
 

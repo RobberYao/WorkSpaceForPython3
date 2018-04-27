@@ -4,6 +4,7 @@ from FrameWorkOfSaicAutoTest.logModule import loggingConfig
 
 lc = loggingConfig.loggingConfig()
 
+
 # link : http://xiaocong.github.io/slides/android-uiautomator-and-python/#/main
 # 主页面方法
 
@@ -61,6 +62,13 @@ def enterSettings():
     lc.fileLog().info('start enterSettings...')
     d(text='Settings').click()
     lc.fileLog().info('stop enterSettings...')
+
+
+# 进入蓝牙音乐页面中
+def enterBTMusic():
+    lc.fileLog().info('start enterBTMusic...')
+    d(text='BT-Music').click()
+    lc.fileLog().info('stop enterBTMusic...')
 
 
 # 底层控件向左滑动

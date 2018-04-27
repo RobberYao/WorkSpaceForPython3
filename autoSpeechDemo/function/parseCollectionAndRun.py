@@ -243,6 +243,3 @@ if __name__ == '__main__':
         logHandler.pullFile()  # 从车机拉取日志至本地临时文件和保存文件
         logHandler.markResult(voiceCorrectResponse, logHandler.matchVoice(voiceCorrectResponse))  # 匹配车机是否返回预期值并做处理
         logHandler.cleanTempFile()  # 清空本地日志临时文件
-
-    # osPlay.playTimes_10(list[0])
-
