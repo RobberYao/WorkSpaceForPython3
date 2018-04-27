@@ -6,11 +6,11 @@ lc = loggingConfig.loggingConfig()
 
 # 音乐播放页面功能
 
-# 播放方式、单曲循环、重复播放（大图标）
-def changePlayStatusByLocation():
-    lc.fileLog().info('start changePlayStatusByLocation...')
+# 播放方式、单曲循环、重复播放（小图标）
+def changePlayStatus():
+    lc.fileLog().info('start changePlayStatus...')
     d.click(255, 345)
-    lc.fileLog().info('stop changePlayStatusByLocation...')
+    lc.fileLog().info('stop changePlayStatus...')
     time.sleep(2)
 
 
