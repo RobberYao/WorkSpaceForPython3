@@ -20,6 +20,11 @@ osPlay：音频播放类
 
 ------uiAutoMatorDemo------------------------------------------------------------------------------
 
+bTMusicPage:蓝牙音乐页面功能
+    bTMusicPage.getBTNextSong():# 播放下一首歌
+    bTMusicPage.getBTPerviousSong():# 播放下一首歌
+    bTMusicPage.changePlayStatus():# 改变播放状态 播放/暂停
+
 carSettingPage:汽车设置页面功能
     carSettingPage.swipeUpLeftItems():# carSetting页面左边栏向上滑动
     carSettingPage.swipeDownLeftItems():# carSetting页面左边栏向下滑动
@@ -82,6 +87,9 @@ mainPage:主页面功能
     mainPage.minimization():# 打开后台页面
     mainPage.cleanAllPage():# 关闭所有后台页面
 
+    mainPage.enterBTMusic():# 进入蓝牙音乐页面中
+
+    mainPage.enterAppByIndex(x,y):# 通过坐标点击功能 列如：[145,520],[295,520],[145,520],[715,520],[875,520]
     mainPage.useMainPageFunction(resourceId):# 通过传入resourceId调用功能（暂不使用）
 
 

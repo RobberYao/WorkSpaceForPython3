@@ -11,7 +11,7 @@ def playAllOfMusic():
     lc.fileLog().info('stop playAllOfMusic...')
 
 
-# 播放全部音乐
+# 播放随机音乐
 def playRandom():
     lc.fileLog().info('start playRandom...')
     d(resourceId='com.android.music:id/tv_play_random').click()

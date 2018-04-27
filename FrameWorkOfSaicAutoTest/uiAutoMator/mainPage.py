@@ -103,6 +103,15 @@ def swipeLeftInAppMenuPage():
     lc.fileLog().info('end swipeLeftInAppMenuPage...')
 
 
+# 通过坐标点击功能 列如：[145,520],[295,520],[145,520],[715,520],[875,520]
+def enterAppByIndex(x,y):
+    lc.fileLog().info('start swipeLeftInAppMenuPage...')
+    d.click(x, y)
+    time.sleep(2)
+    lc.fileLog().info('end swipeLeftInAppMenuPage...')
+
+
+
 # 通过传入resourceId调用功能
 def useMainPageFunction(resourceId):
     lc.fileLog().info('Start ' + resourceId + ' ...')
