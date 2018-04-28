@@ -106,7 +106,7 @@ musicFilePage音乐文件页面功能：
 
 
 musicModule音乐播放页面功能：
-    musicModule.changePlayStatusByLocation():# 播放方式、单曲循环、重复播放（大图标）
+    musicModule.changePlayStatus():# 播放方式、单曲循环、重复播放（小图标）
     musicModule.getPreviousSongByLocation():# 播放上一首歌
     musicModule.backOff():# 快退
     musicModule.forward():# 快进

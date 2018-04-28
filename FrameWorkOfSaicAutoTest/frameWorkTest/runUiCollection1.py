@@ -12,6 +12,9 @@ if __name__ == '__main__':
 
     filePath3 = 'D:/mp3File/english/musicVoice/e_g_smartMirror.mp3'  # 语音播放音频的路径
     filePath4 = 'D:/mp3File/english/musicVoice/e_g_nextSong.mp3'
+
+
+
     # while True: #无限循环
     i = 0
     for i in range(0, 3):  # 循环2次
@@ -31,6 +34,9 @@ if __name__ == '__main__':
         mainPage.swipeRightInAppMenuPage()
         mainPage.enterMusic()
         osPlay.playTimes(filePath3, 1)
+
+        osPlay.play('D:/mp3File/english/musicVoice/e_g_nextSong.mp3')
+
         musicModule.enterMusicFilePage()
         musicFilePage.selectByMyFavorite()
         musicFilePage.selectByPlayTimes()

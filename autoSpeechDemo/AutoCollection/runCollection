@@ -1,6 +1,6 @@
 languageDict=english,repeat=1;
 controlModule=controlVoice,repeat=1;
-voice=e_g_Cancel,repeat=1,correctResponse=Cancel
+voice=e_g_Cancel,repeat=1,correctResponse=Default.Global.Cancel
 /
 languageDict=english,repeat=1;
 mapModule=mapVoice,repeat=1;
