@@ -71,6 +71,13 @@ def enterBTMusic():
     lc.fileLog().info('stop enterBTMusic...')
 
 
+# 进入蓝牙电话页面中
+def enterBTPhone():
+    lc.fileLog().info('start enterBTPhone...')
+    d(text='Phone').click()
+    lc.fileLog().info('stop enterBTPhone...')
+
+
 # 底层控件向左滑动
 def swipeBottomLeft():
     lc.fileLog().info('start swipeBottomLeft...')
@@ -104,12 +111,11 @@ def swipeLeftInAppMenuPage():
 
 
 # 通过坐标点击功能 列如：[145,520],[295,520],[145,520],[715,520],[875,520]
-def enterAppByIndex(x,y):
+def enterAppByIndex(x, y):
     lc.fileLog().info('start swipeLeftInAppMenuPage...')
     d.click(x, y)
     time.sleep(2)
     lc.fileLog().info('end swipeLeftInAppMenuPage...')
-
 
 
 # 通过传入resourceId调用功能
@@ -181,4 +187,5 @@ if __name__ == '__main__':
     # swipeRightInAppMenuPage()
     # swipeRightInAppMenuPage()
     # enterCarSetting()
-    enterSettings()
+    # enterSettings()
+    enterBTPhone()

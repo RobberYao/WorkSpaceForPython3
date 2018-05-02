@@ -25,6 +25,26 @@ bTMusicPage:蓝牙音乐页面功能
     bTMusicPage.getBTPerviousSong():# 播放下一首歌
     bTMusicPage.changePlayStatus():# 改变播放状态 播放/暂停
 
+bTPhonePage:蓝牙电话页面功能
+    dbTPhonePage.dialing0To9(num):# 拨号0到9
+    dbTPhonePage.dialingStarKey():# 拨*号
+    dbTPhonePage.dialingPoundKey():# 拨#号
+    dbTPhonePage.deleteButton():# 删除拨号
+    dbTPhonePage.back():# 回退
+    dbTPhonePage.recentCalls():# 最近通话记录，坐标暂定为(615, 140)
+    dbTPhonePage.contactsList():# 联系人，坐标暂定为(745, 140)
+    dbTPhonePage.confirm():# 拨打
+    dbTPhonePage.cancel():# 取消
+    dbTPhonePage.endCall():# 挂断电话
+    dbTPhonePage.mute():# 静音
+    dbTPhonePage.switch():# 切换音频通道
+    dbTPhonePage.dialpad():# 拨号盘
+    dbTPhonePage.selectRecentCallsByCallName(callName):# 根据联系人名称选择拨号
+    dbTPhonePage.selectRecentCallsByCallNum(callNum):# 根据电话号码选择拨号
+    dbTPhonePage.selectContactsListByCallName(callName):# 根据联系人名称选择拨号
+    dbTPhonePage.selectContactsListByCallNum(callNum):# 根据联系人电话选择拨号
+    dbTPhonePage.dialButton():# 拨打按键
+
 carSettingPage:汽车设置页面功能
     carSettingPage.swipeUpLeftItems():# carSetting页面左边栏向上滑动
     carSettingPage.swipeDownLeftItems():# carSetting页面左边栏向下滑动
@@ -88,6 +108,7 @@ mainPage:主页面功能
     mainPage.cleanAllPage():# 关闭所有后台页面
 
     mainPage.enterBTMusic():# 进入蓝牙音乐页面中
+    mainPage.enterBTPhone():# 进入蓝牙电话页面中
 
     mainPage.enterAppByIndex(x,y):# 通过坐标点击功能 列如：[145,520],[295,520],[145,520],[715,520],[875,520]
     mainPage.useMainPageFunction(resourceId):# 通过传入resourceId调用功能（暂不使用）
