@@ -138,6 +138,19 @@ musicModule音乐播放页面功能：
     musicModule.enterMusicFilePage():# 打开音乐文件界面
 
 
+radioPage收音机页面功能：
+    radioPage.exitRadioPage():# 退出radio页面
+    radioPage.enterSoundEffectPage():# 进入音效设置页面
+    radioPage.autoSearchChannels():# 收音机频道刷新（耗时35秒）
+    radioPage.selectFavoriteChannels():# 选择偏好页面[700,130]坐标暂写死
+    radioPage.selectAmChannels():# 选择AM页面[830,130]坐标暂写死
+    radioPage.selectFmChannels():# 选择FM页面[940,130]坐标暂写死
+    radioPage.selectChannelByName(channelName):# 根据名称选择频道
+    radioPage.setFavoriteByName(channelName):# 根据频道名称设置偏好
+    radioPage.chooseAmChannelByNum(num):# 指定获取AM调频 如：[522,1620]
+    radioPage.chooseFmChannelByNum(num):# 指定获取FM调频 如：[87.5,108.0]
+    radioPage.searchNextChannel():# 向下搜索频道(若无天线，将无限循环搜索)
+    radioPage.searchPerviousChannel():# 向前搜索频道(若无天线，将无限循环搜索)
 
 settings设置页面
     settings.swipeUp():# Settings页面向上滑动
