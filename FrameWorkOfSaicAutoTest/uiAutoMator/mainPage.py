@@ -110,7 +110,7 @@ def swipeLeftInAppMenuPage():
     lc.fileLog().info('end swipeLeftInAppMenuPage...')
 
 
-# 通过坐标点击功能 列如：[145,520],[295,520],[145,520],[715,520],[875,520]
+# 通过坐标点击功能 列如：[145,520],[295,520],[510,520],[715,520],[875,520]
 def enterAppByIndex(x, y):
     lc.fileLog().info('start swipeLeftInAppMenuPage...')
     d.click(x, y)

@@ -14,7 +14,7 @@ def getBTNextSong():
     time.sleep(2)
 
 
-# 播放下一首歌
+# 播放上一首歌
 def getBTPerviousSong():
     lc.fileLog().info('start getBTPerviousSong...')
     d(resourceId='com.clw.btmusic:id/bt_pervious').click()
