@@ -161,6 +161,22 @@ settings设置页面
     settings.enterLanguageAndInput():# 进入语言选择界面
     settings.chooseLanguage(language):# 选择语言 范围：['English', 'Español', '中文']
 
+videoPage视频页面
+    videoPage.clickScreen():# 点击屏幕
+    videoPage.back():# 退出视频
+    videoPage.swipeLeft():# 页面向右滑动
+    videoPage.swipeRight():# 页面向左滑动
+    videoPage.selectVideoByName(videoName):# 根据视频名称选择播放视频
+    videoPage.clickUpperRightCornerOpenRightList():# 点击右上角图标打开右边播放栏
+    videoPage.clickRightCornerOpenRightList():# 点击右侧长条图标打开右边播放栏
+    videoPage.swipeOpenRightList():# 滑动打开右边播放栏
+    videoPage.swipeCloseRightList():# 滑动关闭右边播放栏
+    videoPage.changeVideoStatusByBigIcon():# 点击中央大图片改变播放状态
+    videoPage.changeVideoStatusByBigIcon():# 点击左下小图片改变播放状态
+    videoPage.getNextVideo():
+    videoPage.getPerviousVideo():# 播放上个视频
+    videoPage.videoMute():# 静音/关闭静音
+
 
 
 
