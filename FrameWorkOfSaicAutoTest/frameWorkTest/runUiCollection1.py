@@ -1,4 +1,6 @@
-#
+# ***脚本模版***
+
+
 from autoSpeechDemo.function import osPlay
 from FrameWorkOfSaicAutoTest.uiAutoMator import carSettingPage
 from FrameWorkOfSaicAutoTest.uiAutoMator import mainPage
@@ -6,6 +8,9 @@ from FrameWorkOfSaicAutoTest.uiAutoMator import musicModule
 from FrameWorkOfSaicAutoTest.uiAutoMator import musicFilePage
 from FrameWorkOfSaicAutoTest.uiAutoMator import settings
 from FrameWorkOfSaicAutoTest.voiceAutoTest import osPlay
+from FrameWorkOfSaicAutoTest.logModule import loggingConfig
+
+lc = loggingConfig.loggingConfig()
 import time
 
 if __name__ == '__main__':
@@ -13,11 +18,10 @@ if __name__ == '__main__':
     filePath3 = 'D:/mp3File/english/musicVoice/e_g_smartMirror.mp3'  # 语音播放音频的路径
     filePath4 = 'D:/mp3File/english/musicVoice/e_g_nextSong.mp3'
 
-
-
     # while True: #无限循环
-    i = 0
-    for i in range(0, 3):  # 循环2次
+    i = 1  # 起始次数
+    k = 10  # 循环次数（按需求可修改）
+    while i <= k:  # 循环10次
         mainPage.minimization()
         mainPage.cleanAllPage()
 
@@ -67,8 +71,10 @@ if __name__ == '__main__':
         carSettingPage.changeSoundStyle('10K', 11)
         carSettingPage.changeSoundStyle('15K', 12)
         carSettingPage.changeSoundStyle('17.5K', 13)
-        i + 1
-        print('运行 ' + str(i) + ' 次')
-    ''' '''
 
-    # eval('mainPage.cleanAllPage()')
+        lc.fileLog().info('has run ' + str(i) + ' times')  # 日志文件记录当前运行次数
+        print('has run ' + str(i) + ' times')  # 控制台输出当前运行次数
+        i = i + 1  # 运行次数累加1
+    else:
+        lc.fileLog().info('run ' + str(i - 1) + ' times complete ')  # 日志文件记录总运行次数
+        print('run ' + str(i - 1) + ' times complete ')  # 控制台输出总运行次数
